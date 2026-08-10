@@ -1,6 +1,6 @@
 import json
 import requests
-
+from prompts.system_prompt import SYSTEM_PROMPT
 
 # =========================================================
 # OLLAMA CONFIG
@@ -10,21 +10,6 @@ OLLAMA_URL = "http://localhost:11434/api/chat"
 
 MODEL_NAME = "llama3.2"
 
-SYSTEM_PROMPT = """
-You are a helpful AI assistant.
-
-Follow these rules:
-
-- Answer the user's question directly.
-- Give clear and easy-to-understand answers.
-- Keep answers concise unless the user asks for detail.
-- Use Markdown formatting when useful.
-- Use bullet points for lists.
-- For programming questions, provide clean code examples.
-- Explain code in simple language.
-- Use the previous conversation messages to understand context.
-- If you are unsure about something, say so instead of inventing information.
-"""
 
 # =========================================================
 # STREAM AI RESPONSE

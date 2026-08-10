@@ -67,10 +67,6 @@ function ChatBox() {
   }, [messages, loading]);
 
 
-  // =========================================================
-  // LOAD HISTORY WHEN PAGE OPENS
-  // =========================================================
-
   useEffect(() => {
 
     loadHistory();
@@ -975,7 +971,7 @@ const handleLogoutSuccess = () => {
           errorMessage;
 
       } catch {
-        // Ignore JSON parsing error
+        
       }
 
       throw new Error(

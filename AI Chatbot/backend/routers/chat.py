@@ -4,6 +4,7 @@ from fastapi import (
     HTTPException
 )
 
+
 from fastapi.responses import StreamingResponse
 
 from pydantic import BaseModel
@@ -709,10 +710,6 @@ def chat(
     db: Session = Depends(get_db)
 ):
 
-    # =====================================================
-    # MESSAGE
-    # =====================================================
-
     text = request.message.strip()
 
 
@@ -724,9 +721,7 @@ def chat(
         )
 
 
-    # =====================================================
     # CHECK LOGIN
-    # =====================================================
 
     if token:
 

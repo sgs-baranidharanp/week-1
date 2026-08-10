@@ -1,16 +1,99 @@
-# React + Vite
+# 🤖 AI Chatbot using React, FastAPI, PostgreSQL & Ollama
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+An AI chatbot built using React.js, FastAPI, PostgreSQL, and Ollama (Llama 3.2). It supports JWT authentication, chat history, conversation management, and AI-powered responses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User Registration & Login
+- JWT Authentication
+- AI Chat using Ollama (Llama 3.2)
+- Conversation History
+- PostgreSQL Database
+- Responsive React UI
+- FastAPI Backend
+- Chat Context (Previous Messages)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+Frontend
+- React.js
+- Tailwind CSS
+
+Backend
+- FastAPI
+- SQLAlchemy
+- JWT Authentication
+- Ollama
+
+Database
+- PostgreSQL
+
+AI Model
+- Llama 3.2
+
+---
+
+## Project Structure
+
+frontend/
+backend/
+models/
+routers/
+services/
+database/
+
+---
+
+## Installation
+
+### Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+                    AI CHATBOT SYSTEM
+
++---------------------+
+|      User           |
++----------+----------+
+           |
+           |
+           v
++---------------------+
+| React.js Frontend   |
+| - Login             |
+| - Chat UI           |
+| - History           |
++----------+----------+
+           |
+      HTTP / REST API
+           |
+           v
++----------------------+
+| FastAPI Backend      |
+|----------------------|
+| Authentication (JWT) |
+| Chat Router          |
+| Conversation Router  |
+| Ollama Service       |
++-----+-----------+----+
+      |           |
+      |           |
+      |           |
+      v           v
+
++-------------+   +----------------+
+| PostgreSQL  |   | Ollama Server  |
+|-------------|   |----------------|
+| Users       |   | Llama 3.2      |
+| Conversation|   | AI Model       |
+| Messages    |   +----------------+
++-------------+
